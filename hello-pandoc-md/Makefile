@@ -25,6 +25,9 @@ hello-chart: build_dir
 	cd build && \
 		pandoc -s -F pandoc-plot \
 			-o hello-chart.html ../hello-chart.md
+	cd build && \
+		pandoc -s -F pandoc-plot \
+			-o hello-chart.pdf ../hello-chart.md
 
 build_dir:
 	mkdir -p build
