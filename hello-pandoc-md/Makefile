@@ -26,7 +26,7 @@ hello-chart: build_dir
 		pandoc -s -F pandoc-plot \
 			-o hello-chart.html ../hello-chart.md
 
-build_dir: build/
+build_dir:
 	mkdir -p build
 
 .PHONY: clean
