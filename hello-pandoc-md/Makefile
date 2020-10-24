@@ -29,6 +29,9 @@ hello-chart: build_dir
 	cd build && \
 		pandoc -s -F pandoc-plot \
 			-o hello-chart_latex.pdf ../hello-chart.md
+	cd build && \
+		pandoc -s -F pandoc-plot -t html \
+			-o hello-chart_wkhtmltopdf.pdf ../hello-chart.md
 
 hello-presentation: build_dir
 	cd build && \
