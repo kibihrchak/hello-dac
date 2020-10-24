@@ -3,6 +3,7 @@
 	hello-diagram-gen-filter \
 	hello-csv-table \
 	hello-chart \
+	hello-presentation \
 	build_dir \
 	clean
 
@@ -28,6 +29,15 @@ hello-chart: build_dir
 	cd build && \
 		pandoc -s -F pandoc-plot \
 			-o hello-chart.pdf ../hello-chart.md
+
+hello-presentation: build_dir
+	cd build && \
+		pandoc -s -t revealjs \
+		-V revealjs-url=https://unpkg.com/reveal.js@3.9.2 \
+			-o hello-presentation.html ../hello-presentation.md
+	cd build && \
+		pandoc -s -t beamer \
+			-o hello-presentation.pdf ../hello-presentation.md
 
 build_dir:
 	mkdir -p build
