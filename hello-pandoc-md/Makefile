@@ -28,7 +28,7 @@ hello-chart: build_dir
 			-o hello-chart.html ../hello-chart.md
 	cd build && \
 		pandoc -s -F pandoc-plot \
-			-o hello-chart.pdf ../hello-chart.md
+			-o hello-chart_latex.pdf ../hello-chart.md
 
 hello-presentation: build_dir
 	cd build && \
@@ -37,7 +37,7 @@ hello-presentation: build_dir
 			-o hello-presentation.html ../hello-presentation.md
 	cd build && \
 		pandoc -s -t beamer \
-			-o hello-presentation.pdf ../hello-presentation.md
+			-o hello-presentation_beamer.pdf ../hello-presentation.md
 
 build_dir:
 	mkdir -p build
