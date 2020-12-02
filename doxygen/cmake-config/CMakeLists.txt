@@ -24,6 +24,7 @@ if(DOXYGEN_FOUND)
   doxygen_add_docs(
     doxygen-docs
     ${TARGET_SOURCES}
+    index.dox
     COMMENT "Generate documents."
   )
 endif(DOXYGEN_FOUND)
