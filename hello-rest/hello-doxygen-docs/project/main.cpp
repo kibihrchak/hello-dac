@@ -16,6 +16,15 @@ void bar(const int a)
 }
 #endif
 
+/**
+ *  This is a main function
+ * 
+ *  This main function does some **serious stuff**.
+ * 
+ *  \param  argc    Number of arguments
+ *  \param  argv    Arguments, duh
+ *  \return         0 if all is okay
+ */
 int main(int argc, char const *argv[])
 {
     printf("Hello main\n");

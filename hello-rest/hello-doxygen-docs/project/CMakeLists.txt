@@ -13,11 +13,12 @@ if(DOXYGEN_FOUND)
   get_target_property(TARGET_DEF HelloDoxygenCmakeConfig COMPILE_DEFINITIONS)
 
   set(DOXYGEN_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/doxygen-docs")
-  set(DOXYGEN_EXTRACT_ALL "YES")
-  set(DOXYGEN_ENABLE_PREPROCESSING "YES")
-  set(DOXYGEN_SOURCE_BROWSER "YES")
-  set(DOXYGEN_INLINE_SOURCES "YES")
+  set(DOXYGEN_EXTRACT_ALL YES)
+  set(DOXYGEN_ENABLE_PREPROCESSING YES)
+  set(DOXYGEN_SOURCE_BROWSER YES)
+  set(DOXYGEN_INLINE_SOURCES YES)
   set(DOXYGEN_PREDEFINED ${TARGET_DEF})
+  set(DOXYGEN_GENERATE_XML YES)
 
   # this target will only be built if specifically asked to.
   # run "make api-docs" to create the doxygen documentation
